@@ -1,0 +1,117 @@
+body {
+    font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    background-image: url("https://images.unsplash.com/photo-1604147495798-57beb5d6af73?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2370&q=80");
+    background-size: cover; /* A imagem cobrirá toda a área */
+  background-position: center; /* Centraliza a imagem */
+  background-attachment: fixed;
+  border: 30px solid black;
+}
+
+.form-container {
+    background-color: #000000;
+    color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.3);
+    width: 300px;
+    text-align: center;
+}
+
+.form-container h2 {
+    margin-bottom: 20px;
+}
+
+input[type="text"], input[type="email"], input[type="password"] {
+    width: 90%;
+    padding: 10px;
+    margin: 10px 0;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+}
+
+button {
+    width: 100%;
+    padding: 10px;
+    border: none;
+    background-color: #37deff;
+    color: rgb(0, 0, 0);
+    font-weight: bold;
+    border-radius: 4px;
+    cursor: pointer;
+    margin-bottom: 10px; /* Espaçamento entre botões */
+}
+
+button:hover {
+    background-color: #00346b;
+}
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body, html {
+    height: 100%;
+    overflow: hidden;
+    font-family: Arial, sans-serif;
+}
+
+/* Fundo animado de polígonos */
+.background {
+    position: fixed;
+    width: 100vw;
+    height: 100vh;
+    overflow: hidden;
+    top: 0;
+    left: 0;
+    z-index: -1; /* Para garantir que fique atrás do formulário */
+}
+
+/* Estilos dos polígonos */
+.polygon, .spolygon {
+    position: absolute;
+    width: 120px;
+    height: 120px;
+    background: rgb(0, 0, 0);
+    clip-path: polygon(0% 50%, 25% 0%, 75% 0%, 100% 50%, 75% 100%, 25% 100%);
+    animation: move 10s ease-in-out infinite;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5);
+}
+
+.spolygon {
+    background: rgba(0, 255, 255, 0.685);
+    animation-duration: 12s;
+}
+
+/* Animação de movimento */
+@keyframes move {
+    0% { transform: translateY(0) translateX(0) scale(1); }
+    25% { transform: translateY(-20px) translateX(20px) scale(1.1); }
+    50% { transform: translateY(20px) translateX(-20px) scale(1); }
+    75% { transform: translateY(-20px) translateX(20px) scale(1.1); }
+    100% { transform: translateY(0) translateX(0) scale(1); }
+}
+/* Fade-in para as páginas específicas */
+.fade-in {
+    opacity: 0;
+    animation: fadeIn 1s forwards; /* Animação para o fade-in */
+}
+
+@keyframes fadeIn {
+    to {
+        opacity: 2;
+    }
+}
+
+/* Fade-out para o redirecionamento */
+.fade-out {
+    transition: opacity 1s ease, background-color 1s ease;
+    opacity: 0;
+    background-color: #000;
+}
